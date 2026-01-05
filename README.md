@@ -1,3 +1,3 @@
 # codicium.github.io
 
-placeholder
+Developing extremely simple apps that just work.
