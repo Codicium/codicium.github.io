@@ -1,23 +1,140 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>Huge Clock</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codicium - Minimalist Productivity Apps</title>
     <style>
-        body { font-family: sans-serif; text-align: center; padding: 50px; }
-        a { color: #007bff; text-decoration: none; }
+        :root {
+            --bg: #0a0a0a;
+            --card-bg: #141414;
+            --text: #f0f0f0;
+            --text-dim: #888;
+            --accent: #FF5252;
+            --accent-blue: #007bff;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            font-weight: 300;
+            letter-spacing: 2px;
+            margin-bottom: 40px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            width: 100%;
+            max-width: 800px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 24px;
+            text-align: left;
+            border: 1px solid #222;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h2 {
+            margin-top: 0;
+            font-weight: 400;
+            color: #fff;
+        }
+
+        .card p {
+            color: var(--text-dim);
+            line-height: 1.5;
+            font-size: 14px;
+        }
+
+        .links {
+            margin-top: 20px;
+            display: flex;
+            gap: 15px;
+        }
+
+        .links a {
+            color: var(--accent-blue);
+            text-decoration: none;
+            font-size: 13px;
+            border-bottom: 1px solid transparent;
+        }
+
+        .links .pomodoro-link {
+            color: var(--accent);
+        }
+
+        .links a:hover {
+            border-bottom-color: currentColor;
+        }
+
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            color: var(--text-dim);
+            font-size: 12px;
+        }
+
+        .ads-link {
+            color: var(--text-dim);
+            text-decoration: none;
+            margin-top: 10px;
+            display: inline-block;
+        }
     </style>
 </head>
+
 <body>
-    <h1>Huge Clock</h1>
-    <p>Simple, effective full-screen clock, timer, and stopwatch. It just works.</p>
-    
-    <p>
-        <a href="privacy.html">Privacy Policy</a> | 
-        <a href="app-ads.txt">app-ads.txt</a>
-    </p>
-    
-    <p style="margin-top: 50px; color: #888;">
-        Contact support: codicium91+dev@gmail.com
-    </p>
+    <h1>CODICIUM</h1>
+
+    <div class="grid">
+        <!-- Pomodoro Voice -->
+        <div class="card" style="border-top: 3px solid var(--accent);">
+            <h2>Pomodoro Voice</h2>
+            <p>A minimalist Pomodoro timer designed for flow. Features custom accent colors, smooth transitions, and
+                productivity-boosting quotes.</p>
+            <div class="links">
+                <a href="pomodoro-voice-privacy.html" class="pomodoro-link">Privacy Policy</a>
+                <a href="#" class="pomodoro-link">Google Play</a>
+            </div>
+        </div>
+
+        <!-- Huge Clock -->
+        <div class="card" style="border-top: 3px solid var(--accent-blue);">
+            <h2>Huge Clock</h2>
+            <p>Simple, effective full-screen clock, timer, and stopwatch. Optimized for high contrast and readability on
+                all screens.</p>
+            <div class="links">
+                <a href="huge-clock-privacy.html">Privacy Policy</a>
+                <a href="#">Google Play</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Contact support: <a href="mailto:codicium91+dev@gmail.com"
+                style="color: inherit;">codicium91+dev@gmail.com</a></p>
+        <a href="app-ads.txt" class="ads-link">app-ads.txt</a>
+    </footer>
 </body>
+
 </html>
