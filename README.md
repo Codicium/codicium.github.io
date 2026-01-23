@@ -2,7 +2,7 @@
 
 Developing extremely simple apps that just work.
 
-I'm\ dedicated to building minimalist, focused productivity tools for Android and iOS. 
+I'm dedicated to building minimalist, focused productivity tools for Android and iOS. 
 
 Philosophy centers on creating elegant interfaces that eliminate distractions and help you stay in the flow. 
 Software should be intuitive, high-performance, and privacy-respecting by design. 
