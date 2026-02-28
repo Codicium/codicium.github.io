@@ -5,23 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy - Codicium Apps</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Outfit:wght@300;400;600&display=swap"
+        rel="stylesheet">
     <style>
         :root {
-            --bg: #0a0a0a;
-            --card-bg: #141414;
-            --text: #f0f0f0;
+            --bg: #050505;
+            --card-bg: #111111;
+            --text: #ffffff;
             --text-dim: #888;
-            --accent: #FF5252;
             --accent-blue: #007bff;
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-family: 'Inter', -apple-system, sans-serif;
             background-color: var(--bg);
             color: var(--text);
             margin: 0;
-            padding: 40px 20px;
-            line-height: 1.6;
+            padding: 60px 20px;
+            line-height: 1.8;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -35,70 +39,85 @@
         h1,
         h2,
         h3 {
+            font-family: 'Outfit', sans-serif;
             font-weight: 300;
             color: #fff;
         }
 
         h1 {
-            letter-spacing: 2px;
+            letter-spacing: 5px;
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            font-size: 2rem;
         }
 
         h2 {
-            border-bottom: 1px solid #222;
-            padding-bottom: 10px;
-            margin-top: 40px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            padding-bottom: 12px;
+            margin-top: 50px;
+            font-size: 1.4rem;
         }
 
         p,
         li {
             color: var(--text-dim);
-            font-size: 16px;
+            font-size: 1rem;
+            font-weight: 300;
         }
 
         strong {
             color: var(--text);
+            font-weight: 500;
         }
 
         a {
             color: var(--accent-blue);
             text-decoration: none;
+            transition: opacity 0.2s;
         }
 
         a:hover {
+            opacity: 0.8;
             text-decoration: underline;
         }
 
         .last-updated {
             text-align: center;
-            font-size: 14px;
-            margin-bottom: 40px;
-        }
-
-        .footer {
-            margin-top: 60px;
-            text-align: center;
-            border-top: 1px solid #222;
-            padding-top: 20px;
+            font-size: 0.9rem;
+            color: var(--text-dim);
+            margin-bottom: 50px;
         }
 
         .app-list {
-            list-style: none;
-            padding: 0;
             display: flex;
             gap: 15px;
             justify-content: center;
-            margin-bottom: 40px;
+            margin-bottom: 50px;
+            flex-wrap: wrap;
         }
 
         .app-item {
             background: var(--card-bg);
             padding: 10px 20px;
-            border-radius: 20px;
-            border: 1px solid #222;
+            border-radius: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
             color: #fff;
-            font-size: 14px;
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .app-item:hover {
+            border-color: var(--accent-blue);
+            transform: translateY(-2px);
+        }
+
+        .footer {
+            margin-top: 80px;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding-top: 40px;
         }
     </style>
 </head>
@@ -108,10 +127,12 @@
         <h1>Privacy Policy</h1>
         <p class="last-updated">Last updated: January 23, 2026</p>
 
-        <p style="text-align: center; margin-bottom: 20px;">This Privacy Policy applies to the following applications developed by <strong>Codicium</strong>:</p>
+        <p style="text-align: center; margin-bottom: 25px;">This Privacy Policy applies to the following applications
+            developed by <strong>Codicium</strong>:</p>
         <div class="app-list">
             <span class="app-item">Pomodoro Voice</span>
-            <span class="app-item">Huge Clock</span>
+            <a href="https://play.google.com/store/apps/details?id=com.codicium.huge_clock&pcampaignid=web_share"
+                class="app-item" target="_blank" rel="noopener noreferrer">Huge Clock</a>
         </div>
 
         <h2>1. Overview</h2>
@@ -131,11 +152,13 @@
             <li>
                 <strong>Google AdMob:</strong> Used to provide advertisements. AdMob may use device identifiers to serve
                 personalized or non-personalized ads.
-                <a href="https://www.google.com/policies/privacy/">View Google's Privacy Policy</a>
+                <a href="https://www.google.com/policies/privacy/" target="_blank" rel="noopener noreferrer">View
+                    Google's Privacy Policy</a>
             </li>
             <li>
                 <strong>Google Play Services:</strong> Used for in-app purchases and basic app functionality.
-                <a href="https://www.google.com/policies/privacy/">View Google's Privacy Policy</a>
+                <a href="https://www.google.com/policies/privacy/" target="_blank" rel="noopener noreferrer">View
+                    Google's Privacy Policy</a>
             </li>
         </ul>
 
@@ -165,7 +188,7 @@
         </p>
 
         <div class="footer">
-            <p><a href="index.html">Back to Home</a></p>
+            <p><a href="index.html">← Back to Home</a></p>
         </div>
     </div>
 </body>
