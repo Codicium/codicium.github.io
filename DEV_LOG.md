@@ -17,7 +17,14 @@ A portfolio website representing Codicium's philosophy of "extremely simple apps
 - Pull everything from git (2026-02-12).
 - Consolidated privacy policy into `privacy.html`.
 
+## 2026-07-08
+- Added Breathe Voice and Volt Timer cards, following the Pomodoro Voice precedent: each gets its own dedicated privacy page (`breathe-voice-privacy.html`, `volt-timer-privacy.html`), not the shared `privacy.html`.
+- Neither app is on Play Store yet, so cards show a "Soon" status tag (not "Live") and have no Play Store badge link — added when each ships.
+- New accent colors: teal for Breathe Voice, green for Volt Timer (matches Volt Timer's own in-app accent). Card hover glows and link colors follow.
+- Permissions listed in each privacy page were verified against that app's actual `AndroidManifest.xml`, not copied blind from the existing template — Volt Timer's includes `VIBRATE` (haptics), Breathe Voice's doesn't.
+- App icons resized to the existing 640x640 convention from each app's source `icon.png`.
+
 ## Planned
 - Enhance aesthetics with modern web design (richer gradients, micro-animations).
 - Ensure SEO best practices.
-- Add more visual showcases for the apps.
+- Swap "Soon" → "Live" + add Play Store badges once Breathe Voice / Volt Timer are published.
