@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Codicium - Minimalist Productivity Apps</title>
     <meta name="description"
-        content="Codicium builds extremely simple Android apps that just work — including Pomodoro Voice, a minimalist voice-guided timer, and Huge Clock, a full-screen OLED-friendly clock and stopwatch.">
+        content="Codicium builds extremely simple Android apps that just work — including Pomodoro Voice, Huge Clock, Breathe Voice, and Volt Timer, each a minimalist voice-guided timer for a different part of your day.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://codicium.github.io/">
     <meta property="og:title" content="Codicium - Minimalist Productivity Apps">
     <meta property="og:description"
-        content="Extremely simple apps that just work: Pomodoro Voice and Huge Clock.">
+        content="Extremely simple apps that just work: Pomodoro Voice, Huge Clock, Breathe Voice, and Volt Timer.">
     <meta property="og:image" content="https://codicium.github.io/assets/huge_clock_icon.png">
     <meta name="twitter:card" content="summary_large_image">
     <link rel="icon" type="image/svg+xml"
@@ -29,8 +29,12 @@
             --text-dim: #808080;
             --accent: #FF5252;
             --accent-blue: #007bff;
+            --accent-teal: #26C6DA;
+            --accent-green: #00E676;
             --accent-glow: rgba(255, 82, 82, 0.1);
             --blue-glow: rgba(0, 123, 255, 0.1);
+            --teal-glow: rgba(38, 198, 218, 0.1);
+            --green-glow: rgba(0, 230, 118, 0.1);
         }
 
         body {
@@ -103,6 +107,14 @@
             animation-delay: 0.35s;
         }
 
+        .grid .card:nth-child(3) {
+            animation-delay: 0.5s;
+        }
+
+        .grid .card:nth-child(4) {
+            animation-delay: 0.65s;
+        }
+
         @keyframes cardFadeIn {
             from {
                 opacity: 0;
@@ -126,6 +138,14 @@
 
         .card.clock:hover {
             box-shadow: 0 20px 50px var(--blue-glow);
+        }
+
+        .card.breathe:hover {
+            box-shadow: 0 20px 50px var(--teal-glow);
+        }
+
+        .card.volt:hover {
+            box-shadow: 0 20px 50px var(--green-glow);
         }
 
         .card-header {
@@ -217,6 +237,14 @@
 
         .clock-link {
             color: var(--accent-blue);
+        }
+
+        .breathe-link {
+            color: var(--accent-teal);
+        }
+
+        .volt-link {
+            color: var(--accent-green);
         }
 
         .status-tag {
@@ -376,6 +404,38 @@
                         src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
                         alt="Get it on Google Play">
                 </a>
+            </div>
+        </div>
+
+        <!-- Breathe Voice -->
+        <div class="card breathe">
+            <div class="card-header">
+                <div class="card-icon">
+                    <img src="assets/breathe_voice_icon.png" alt="Breathe Voice Icon">
+                </div>
+                <h2>Breathe Voice</h2>
+                <span class="status-tag">Soon</span>
+            </div>
+            <p>A guided breathing timer with voice coaching. Box breathing, 4-7-8, and custom patterns, narrated by
+                one of five character voices to keep you paced and present.</p>
+            <div class="links">
+                <a href="breathe-voice-privacy.html" class="breathe-link">Privacy Policy</a>
+            </div>
+        </div>
+
+        <!-- Volt Timer -->
+        <div class="card volt">
+            <div class="card-header">
+                <div class="card-icon">
+                    <img src="assets/volt_timer_icon.png" alt="Volt Timer Icon">
+                </div>
+                <h2>Volt Timer</h2>
+                <span class="status-tag">Soon</span>
+            </div>
+            <p>A HIIT interval timer for Tabata, EMOM, and custom circuits. Voice-coached rounds keep you moving
+                through work and rest without ever looking at the screen.</p>
+            <div class="links">
+                <a href="volt-timer-privacy.html" class="volt-link">Privacy Policy</a>
             </div>
         </div>
     </div>
