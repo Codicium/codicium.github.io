@@ -24,6 +24,9 @@ A portfolio website representing Codicium's philosophy of "extremely simple apps
 - Permissions listed in each privacy page were verified against that app's actual `AndroidManifest.xml`, not copied blind from the existing template — Volt Timer's includes `VIBRATE` (haptics), Breathe Voice's doesn't.
 - App icons resized to the existing 640x640 convention from each app's source `icon.png`.
 
+## 2026-07-13
+- Added JSON-LD structured data (`Organization` + `SoftwareApplication` per app) to `index.html`. Researched first: `llms.txt` checked against 2026 evidence (Google explicit non-signal, 97% of files get zero AI-bot traffic per Ahrefs 137k-site study) — skipped, doesn't work. Schema.org markup does have evidence (2.5x higher AI-answer citation rate per 2025 study, confirmed read by Google/Microsoft/ChatGPT) — added instead. Breathe Voice/Volt Timer entries omit `offers`/Play URL since neither is published yet, no fabricated data.
+
 ## Planned
 - Enhance aesthetics with modern web design (richer gradients, micro-animations).
 - Ensure SEO best practices.
