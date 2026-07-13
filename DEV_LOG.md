@@ -33,7 +33,8 @@ A portfolio website representing Codicium's philosophy of "extremely simple apps
 - **Real bug found and fixed**: `privacy.html` (now effectively Huge Clock-only per `[[codicium_web]]` vault note) still listed Pomodoro Voice in its app badges, and its permission list (`WAKE_LOCK`, `POST_NOTIFICATIONS`, `SCHEDULE_EXACT_ALARM`, `RECEIVE_BOOT_COMPLETED`, `INTERNET`, `BILLING`) was a leftover from when the page covered both apps. Checked huge_clock's actual manifest + pubspec deps: only `WAKE_LOCK` (from `wakelock_plus`), `INTERNET` (from `google_mobile_ads`), and `BILLING` (from `in_app_purchase`) are real — `POST_NOTIFICATIONS`/`SCHEDULE_EXACT_ALARM`/`RECEIVE_BOOT_COMPLETED` belong to `flutter_local_notifications`/alarm-manager, which huge_clock doesn't use. Trimmed to the 3 real ones. Bumped both pages' "Last updated" to July 14, 2026 since permission/app-scope claims materially changed.
 - SEO hygiene pass: added `robots.txt` + `sitemap.xml` (didn't exist before), `<link rel="canonical">` on all 6 pages, completed `index.html`'s social meta (`og:site_name`, `twitter:title`/`description`/`image` — card previously only had `twitter:card` with nothing else set).
 
+- Generated `assets/apple-touch-icon.png` (180×180): no rasterizer available (no ImageMagick/Inkscape/rsvg-convert/cairosvg/sharp installed), so redrew the same brand mark natively with Pillow instead of trying to rasterize the SVG — solid `#111111` bg, white "C" in Georgia Bold, flattened to RGB (no alpha, per Apple's own guideline). Wired `<link rel="apple-touch-icon">` into all 5 pages.
+
 ## Planned
 - Enhance aesthetics with modern web design (richer gradients, micro-animations).
 - Swap "Soon" → "Live" + add Play Store badges once Breathe Voice / Volt Timer are published.
-- No PNG app icon for Codicium itself yet — only an inline SVG favicon exists, so no `apple-touch-icon` for iOS home-screen bookmarking. Needs a real 180×180 PNG asset to add.
