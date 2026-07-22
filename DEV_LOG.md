@@ -35,6 +35,8 @@ A portfolio website representing Codicium's philosophy of "extremely simple apps
 
 - Generated `assets/apple-touch-icon.png` (180×180): no rasterizer available (no ImageMagick/Inkscape/rsvg-convert/cairosvg/sharp installed), so redrew the same brand mark natively with Pillow instead of trying to rasterize the SVG — solid `#111111` bg, white "C" in Georgia Bold, flattened to RGB (no alpha, per Apple's own guideline). Wired `<link rel="apple-touch-icon">` into all 5 pages.
 
+- Removed `SCHEDULE_EXACT_ALARM`/`RECEIVE_BOOT_COMPLETED` from `pomodoro-voice-privacy.html`'s permission list — a `pomodoro_voice` dependency audit found `android_alarm_manager_plus` unused and removed it + the manifest permissions that existed only for it, so this page needed to follow to stay accurate.
+
 ## Planned
 - Enhance aesthetics with modern web design (richer gradients, micro-animations).
 - Swap "Soon" → "Live" + add Play Store badges once Breathe Voice / Volt Timer are published.
