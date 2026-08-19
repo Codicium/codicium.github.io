@@ -106,6 +106,8 @@
             --blue-glow: rgba(0, 123, 255, 0.1);
             --teal-glow: rgba(38, 198, 218, 0.1);
             --green-glow: rgba(0, 230, 118, 0.1);
+            --accent-gold: #F5C860;
+            --gold-glow: rgba(245, 200, 96, 0.1);
         }
 
         body {
@@ -219,6 +221,10 @@
             box-shadow: 0 20px 50px var(--green-glow);
         }
 
+        .card.justone:hover {
+            box-shadow: 0 20px 50px var(--gold-glow);
+        }
+
         .card-header {
             display: flex;
             align-items: center;
@@ -316,6 +322,10 @@
 
         .volt-link {
             color: var(--accent-green);
+        }
+
+        .justone-link {
+            color: var(--accent-gold);
         }
 
         .status-tag {
@@ -507,6 +517,22 @@
                 through work and rest without ever looking at the screen.</p>
             <div class="links">
                 <a href="volt-timer-privacy.html" class="volt-link">Privacy Policy</a>
+            </div>
+        </div>
+
+        <!-- Just One -->
+        <div class="card justone">
+            <div class="card-header">
+                <div class="card-icon">
+                    <img src="assets/just_one_icon.png" alt="Just One Icon">
+                </div>
+                <h2>Just One</h2>
+                <span class="status-tag">Soon</span>
+            </div>
+            <p>One habit, one number, one tap a day. No lists, no charts, no score to decode &mdash; just the count of
+                days you have kept it, and a button to keep it again today.</p>
+            <div class="links">
+                <a href="just-one-privacy.html" class="justone-link">Privacy Policy</a>
             </div>
         </div>
     </div>
