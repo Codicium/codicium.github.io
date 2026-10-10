@@ -68,6 +68,21 @@
             },
             {
                 "@type": "SoftwareApplication",
+                "name": "Just One",
+                "applicationCategory": "LifestyleApplication",
+                "operatingSystem": "Android",
+                "description": "One habit, one number, one tap a day: the count of days you have kept it, and a button to keep it again today.",
+                "image": "https://codicium.github.io/assets/just_one_icon.png",
+                "url": "https://play.google.com/store/apps/details?id=com.codicium.just_one",
+                "author": { "@id": "https://codicium.github.io/#organization" },
+                "offers": {
+                    "@type": "Offer",
+                    "price": "0",
+                    "priceCurrency": "USD"
+                }
+            },
+            {
+                "@type": "SoftwareApplication",
                 "name": "Breathe Voice",
                 "applicationCategory": "HealthApplication",
                 "operatingSystem": "Android",
@@ -151,17 +166,17 @@
 
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-            gap: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 24px;
             width: 100%;
-            max-width: 900px;
+            max-width: 1100px;
         }
 
         .card {
             position: relative;
             background: var(--card-bg);
-            border-radius: 24px;
-            padding: 40px;
+            border-radius: 20px;
+            padding: 28px;
             text-align: left;
             border: 1px solid rgba(255, 255, 255, 0.05);
             transition: transform 0.5s cubic-bezier(0.19, 1, 0.22, 1), border-color 0.5s cubic-bezier(0.19, 1, 0.22, 1), box-shadow 0.5s cubic-bezier(0.19, 1, 0.22, 1);
@@ -186,6 +201,10 @@
 
         .grid .card:nth-child(4) {
             animation-delay: 0.65s;
+        }
+
+        .grid .card:nth-child(5) {
+            animation-delay: 0.8s;
         }
 
         @keyframes cardFadeIn {
@@ -488,6 +507,28 @@
             </div>
         </div>
 
+        <!-- Just One -->
+        <div class="card justone">
+            <div class="card-header">
+                <div class="card-icon">
+                    <img src="assets/just_one_icon.png" alt="Just One Icon">
+                </div>
+                <h2>Just One</h2>
+                <span class="status-tag live">Live</span>
+            </div>
+            <p>One habit, one number, one tap a day. No lists, no charts, no score to decode &mdash; just the count of
+                days you have kept it, and a button to keep it again today.</p>
+            <div class="links">
+                <a href="just-one-privacy.html" class="justone-link">Privacy Policy</a>
+                <a href="https://play.google.com/store/apps/details?id=com.codicium.just_one"
+                    class="badge-link" target="_blank" rel="noopener noreferrer">
+                    <img class="play-badge"
+                        src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+                        alt="Get it on Google Play">
+                </a>
+            </div>
+        </div>
+
         <!-- Breathe Voice -->
         <div class="card breathe">
             <div class="card-header">
@@ -520,21 +561,6 @@
             </div>
         </div>
 
-        <!-- Just One -->
-        <div class="card justone">
-            <div class="card-header">
-                <div class="card-icon">
-                    <img src="assets/just_one_icon.png" alt="Just One Icon">
-                </div>
-                <h2>Just One</h2>
-                <span class="status-tag">Soon</span>
-            </div>
-            <p>One habit, one number, one tap a day. No lists, no charts, no score to decode &mdash; just the count of
-                days you have kept it, and a button to keep it again today.</p>
-            <div class="links">
-                <a href="just-one-privacy.html" class="justone-link">Privacy Policy</a>
-            </div>
-        </div>
     </div>
 
     <footer>
