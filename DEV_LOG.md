@@ -37,6 +37,9 @@ A portfolio website representing Codicium's philosophy of "extremely simple apps
 
 - Removed `SCHEDULE_EXACT_ALARM`/`RECEIVE_BOOT_COMPLETED` from `pomodoro-voice-privacy.html`'s permission list — a `pomodoro_voice` dependency audit found `android_alarm_manager_plus` unused and removed it + the manifest permissions that existed only for it, so this page needed to follow to stay accurate.
 
+## 2026-11-04
+- Added `terms.html`, one Terms of Use page for all six apps, for Google Play's trader declaration. Linked it from the `index.html` footer and `sitemap.xml`.
+
 ## Planned
 - Enhance aesthetics with modern web design (richer gradients, micro-animations).
 - Swap "Soon" → "Live" + add Play Store badges once Breathe Voice / Volt Timer are published.
